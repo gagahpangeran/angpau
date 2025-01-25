@@ -1,7 +1,9 @@
+import Envelope from "./components/envelope";
+
 function App() {
   return (
     <>
-      <h1>Angpau</h1>
+      <Envelope />
     </>
   );
 }
