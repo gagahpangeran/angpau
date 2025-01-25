@@ -43,6 +43,12 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true }
       ],
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "warn",
+        { argsIgnorePattern: "^_" }
+      ],
       "prettier/prettier": "error"
     }
   }
