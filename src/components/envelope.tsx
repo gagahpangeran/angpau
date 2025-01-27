@@ -1,5 +1,6 @@
 import { useState } from "react";
 import classModifiers from "../utils/css";
+import Money from "./money";
 
 type EnvelopeState = "open" | "close";
 
@@ -20,6 +21,7 @@ export default function Envelope() {
           <div className="envelope__top-cover" />
           <div className="envelope__top-cover envelope__top-cover--inside" />
         </div>
+        <Money state={envelopeState} />
         <div className="envelope__cover-back" />
       </div>
       <div className="envelope__cover-front envelope__cover-front--inside" />
