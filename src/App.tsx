@@ -1,9 +1,10 @@
-import Envelope from "./components/envelope";
+import NameForm from "./components/name-form";
 
 function App() {
   return (
     <>
-      <Envelope />
+      {/* <Envelope /> */}
+      <NameForm />
     </>
   );
 }

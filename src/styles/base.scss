@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+:root {
+  --red: #cc232a;
+  --pink: #b57d7f;
+}
+
 body {
   min-width: 100%;
   min-height: 100vh;
@@ -13,4 +18,7 @@ body {
   min-width: 100%;
   min-height: 100vh;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
