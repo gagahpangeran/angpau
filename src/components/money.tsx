@@ -1,23 +1,24 @@
 import { useState } from "react";
 import classModifiers from "../utils/css";
-import Rupiah, { type RupiahValue } from "./rupiah";
+import Rupiah from "./rupiah";
+import { type RupiahValue } from "../utils/money";
 
 interface MoneyStack {
   value: RupiahValue;
   modifier: number;
 }
 
-const stack: MoneyStack[] = [
-  { value: 100, modifier: 3 },
-  { value: 50, modifier: 3 },
-  { value: 20, modifier: 3 },
-  { value: 10, modifier: 3 },
-  { value: 5, modifier: 3 },
-  { value: 2, modifier: 2 },
-  { value: 1, modifier: 1 }
-];
+interface MoneyProps {
+  state: "open" | "close";
+  rupiahStack: RupiahValue[];
+}
 
-export default function Money({ state }: { state: string }) {
+export default function Money({ state, rupiahStack }: MoneyProps) {
+  const stack: MoneyStack[] = rupiahStack.map((value, idx, arr) => {
+    const modifier = Math.min(arr.length - idx, 3);
+    return { value, modifier };
+  });
+
   const [currentStack, setCurrentStack] = useState<MoneyStack[]>(stack);
 
   const handleClick = (idx: number) => {
@@ -32,7 +33,7 @@ export default function Money({ state }: { state: string }) {
 
   return (
     <div className={classModifiers("money", state)}>
-      {stack.map(({ value, modifier }, idx) => (
+      {currentStack.map(({ value, modifier }, idx) => (
         <Rupiah
           key={`${idx}-${value}`}
           rupiahValue={value}

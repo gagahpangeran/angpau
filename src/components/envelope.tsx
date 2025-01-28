@@ -1,10 +1,15 @@
 import { useState } from "react";
 import classModifiers from "../utils/css";
 import Money from "./money";
+import { RupiahValue } from "../utils/money";
 
 type EnvelopeState = "open" | "close";
 
-export default function Envelope() {
+interface EnvelopeProps {
+  rupiahStack: RupiahValue[];
+}
+
+export default function Envelope({ rupiahStack }: EnvelopeProps) {
   const [envelopeState, setEnvelopeState] = useState<EnvelopeState>("close");
 
   const handleClick = () => {
@@ -21,7 +26,7 @@ export default function Envelope() {
           <div className="envelope__top-cover" />
           <div className="envelope__top-cover envelope__top-cover--inside" />
         </div>
-        <Money state={envelopeState} />
+        <Money state={envelopeState} rupiahStack={rupiahStack} />
         <div className="envelope__cover-back" />
       </div>
       <div className="envelope__cover-front envelope__cover-front--inside" />

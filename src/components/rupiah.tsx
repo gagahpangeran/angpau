@@ -6,8 +6,9 @@ import r5 from "/5.jpeg";
 import r2 from "/2.jpeg";
 import r1 from "/1.jpeg";
 import classModifiers from "../utils/css";
+import { type RupiahValue } from "../utils/money";
 
-const rupiahImg = {
+const rupiahImg: Record<RupiahValue, string> = {
   100: r100,
   50: r50,
   20: r20,
@@ -16,8 +17,6 @@ const rupiahImg = {
   2: r2,
   1: r1
 };
-
-export type RupiahValue = keyof typeof rupiahImg;
 
 interface RupiahProps {
   rupiahValue: RupiahValue;
