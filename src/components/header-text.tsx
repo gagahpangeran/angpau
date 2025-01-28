@@ -1,6 +1,6 @@
 interface HeaderTextProps {
   name: string;
-  money: number;
+  currentMoney: number;
 }
 
 const formatter = new Intl.NumberFormat("id-ID", {
@@ -8,13 +8,13 @@ const formatter = new Intl.NumberFormat("id-ID", {
   currency: "IDR"
 });
 
-export default function HeaderText({ name, money }: HeaderTextProps) {
+export default function HeaderText({ name, currentMoney }: HeaderTextProps) {
   return (
     <header className="header-text">
       {name.length > 0 ? (
         <>
           <h1>Angpau for {name}</h1>
-          <h1>{formatter.format(money * 1000)}</h1>
+          <h1>{formatter.format(currentMoney * 1000)}</h1>
         </>
       ) : (
         <>
