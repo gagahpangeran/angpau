@@ -6,6 +6,7 @@ import r5 from "/5.jpeg";
 import r2 from "/2.jpeg";
 import r1 from "/1.jpeg";
 import { type RupiahValue } from "../utils/money";
+import classModifiers from "../utils/css";
 
 const rupiahImg: Record<RupiahValue, string> = {
   100: r100,
@@ -22,5 +23,10 @@ interface RupiahProps {
 }
 
 export default function Rupiah({ rupiahValue }: RupiahProps) {
-  return <img className="rupiah" src={rupiahImg[rupiahValue]} />;
+  return (
+    <img
+      className={classModifiers("rupiah", `${rupiahValue}`)}
+      src={rupiahImg[rupiahValue]}
+    />
+  );
 }
