@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router";
 import classModifiers from "../utils/css";
 import Rupiah from "./rupiah";
 import { type RupiahValue } from "../utils/money";
@@ -19,6 +20,9 @@ export default function Money({ state, rupiahStack }: MoneyProps) {
     return { value, modifier };
   });
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const [currentStack, setCurrentStack] = useState<MoneyStack[]>(stack);
 
   const handleClick = (idx: number) => {
@@ -29,6 +33,11 @@ export default function Money({ state, rupiahStack }: MoneyProps) {
     }
 
     setCurrentStack(nextStack);
+
+    if (idx == 0) {
+      const resultUrl = location.pathname + location.search + "&result=1";
+      void navigate(resultUrl);
+    }
   };
 
   return (

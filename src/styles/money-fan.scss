@@ -1,0 +1,39 @@
+.money-fan {
+  --degree-all: 65deg;
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) translateY(50%);
+
+  width: 700px;
+  max-width: 100vw;
+  height: auto;
+  aspect-ratio: 11 / 4;
+
+  &:hover,
+  &:active {
+    --degree-all: 90deg;
+  }
+
+  &__wrapper {
+    height: 100%;
+    width: 100%;
+    transform: rotate(90deg);
+  }
+
+  &__item {
+    --degree-item: calc(
+      var(--degree-all) / 2 - (var(--index) / (var(--length) - 1)) *
+        var(--degree-all)
+    );
+
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    transform-origin: center center;
+    transform: rotate(var(--degree-item));
+    transition: 500ms transform;
+  }
+}
