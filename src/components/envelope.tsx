@@ -7,9 +7,13 @@ type EnvelopeState = "open" | "close";
 
 interface EnvelopeProps {
   rupiahStack: RupiahValue[];
+  addHeaderMoney: (money: number) => void;
 }
 
-export default function Envelope({ rupiahStack }: EnvelopeProps) {
+export default function Envelope({
+  rupiahStack,
+  addHeaderMoney
+}: EnvelopeProps) {
   const [envelopeState, setEnvelopeState] = useState<EnvelopeState>("close");
 
   const handleClick = () => {
@@ -26,7 +30,11 @@ export default function Envelope({ rupiahStack }: EnvelopeProps) {
           <div className="envelope__top-cover" />
           <div className="envelope__top-cover envelope__top-cover--inside" />
         </div>
-        <Money state={envelopeState} rupiahStack={rupiahStack} />
+        <Money
+          state={envelopeState}
+          rupiahStack={rupiahStack}
+          addHeaderMoney={addHeaderMoney}
+        />
         <div className="envelope__cover-back" />
       </div>
       <div className="envelope__cover-front envelope__cover-front--inside" />

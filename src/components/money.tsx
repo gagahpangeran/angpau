@@ -12,9 +12,14 @@ interface MoneyStack {
 interface MoneyProps {
   state: "open" | "close";
   rupiahStack: RupiahValue[];
+  addHeaderMoney: (money: number) => void;
 }
 
-export default function Money({ state, rupiahStack }: MoneyProps) {
+export default function Money({
+  state,
+  rupiahStack,
+  addHeaderMoney
+}: MoneyProps) {
   const stack: MoneyStack[] = rupiahStack.map((value, idx, arr) => {
     const modifier = Math.min(arr.length - idx, 3);
     return { value, modifier };
@@ -32,6 +37,7 @@ export default function Money({ state, rupiahStack }: MoneyProps) {
       nextStack[i].modifier = Math.max(nextStack[i].modifier - 1, 0);
     }
 
+    addHeaderMoney(currentStack[idx].value);
     setCurrentStack(nextStack);
 
     if (idx == 0) {

@@ -1,0 +1,23 @@
+.header-text {
+  position: absolute;
+  top: 16px;
+  text-align: center;
+
+  h1 {
+    font-size: 3em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  @media (max-width: 720px) {
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.5em;
+    }
+  }
+}
