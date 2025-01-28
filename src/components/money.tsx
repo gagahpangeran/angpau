@@ -36,7 +36,10 @@ export default function Money({ state, rupiahStack }: MoneyProps) {
 
     if (idx == 0) {
       const resultUrl = location.pathname + location.search + "&result=1";
-      void navigate(resultUrl);
+
+      setTimeout(() => {
+        void navigate(resultUrl);
+      }, 600);
     }
   };
 
