@@ -20,10 +20,23 @@
   &--open {
     transform: rotateY(0deg);
     top: calc(50% + 200px);
+
+    &::after {
+      display: none;
+    }
   }
 
   &:hover {
     cursor: pointer;
+  }
+
+  &::after {
+    content: "click to open";
+    width: 100%;
+    position: absolute;
+    bottom: -24px;
+    transform: rotateY(180deg);
+    text-align: center;
   }
 
   &__cover-front {
