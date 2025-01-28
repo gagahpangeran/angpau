@@ -8,6 +8,7 @@ interface ResultProps {
 export default function Result({ rupiahStack }: ResultProps) {
   return (
     <div className="result">
+      <a href="/">Get new angpau</a>
       <MoneyFan rupiahStack={rupiahStack} />
     </div>
   );
