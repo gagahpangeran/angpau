@@ -14,7 +14,7 @@ export default function HeaderText({ name, currentMoney }: HeaderTextProps) {
       {name.length > 0 ? (
         <>
           <h1>Angpau for {name}</h1>
-          <h1>{formatter.format(currentMoney * 1000)}</h1>
+          <h2>{formatter.format(currentMoney * 1000)}</h2>
         </>
       ) : (
         <>

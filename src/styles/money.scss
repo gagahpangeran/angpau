@@ -18,8 +18,8 @@
     z-index 100ms 2000ms;
 
   &--open {
-    --w: min(100vw, 550px);
-    top: -80%;
+    --w: min(95vw, 550px);
+    top: -50vh;
     z-index: 2;
   }
 

@@ -1,17 +1,16 @@
 .envelope {
-  --envelope-width: 300px;
-  --envelope-height: 400px;
   --top-height: 50px;
 
-  width: var(--envelope-width);
-  height: var(--envelope-height);
+  width: 80%;
+  max-width: 300px;
+  height: auto;
+  aspect-ratio: 3 / 4;
 
   position: absolute;
-  top: calc(50% - var(--envelope-height) / 2);
-  left: calc(50% - var(--envelope-width) / 2);
+  top: 50%;
 
   transform-style: preserve-3d;
-  transform: rotateY(180deg);
+  transform: rotateY(180deg) translateY(-50%);
   transition:
     transform 500ms,
     top 600ms 1200ms;

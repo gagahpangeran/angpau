@@ -1,6 +1,8 @@
 .header-text {
-  position: absolute;
-  top: 16px;
+  position: fixed;
+  width: 100%;
+  top: 8px;
+  left: 0;
   text-align: center;
 
   h1 {
