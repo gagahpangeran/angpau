@@ -34,12 +34,13 @@ export default function Money({ state, rupiahStack }: MoneyProps) {
   return (
     <div className={classModifiers("money", state)}>
       {currentStack.map(({ value, modifier }, idx) => (
-        <Rupiah
+        <div
           key={`${idx}-${value}`}
-          rupiahValue={value}
-          modifier={`${modifier}`}
+          className={classModifiers("money__item", `${modifier}`)}
           onClick={() => handleClick(idx)}
-        />
+        >
+          <Rupiah rupiahValue={value} />
+        </div>
       ))}
     </div>
   );
