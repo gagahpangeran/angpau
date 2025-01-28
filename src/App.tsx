@@ -32,7 +32,7 @@ function App() {
 
   return (
     <>
-      <HeaderText name={name} currentMoney={headerMoney} />
+      <HeaderText name={name} currentMoney={headerMoney} result={showResult} />
       {screen}
     </>
   );
