@@ -15,7 +15,7 @@
     transform 500ms,
     top 600ms 1200ms;
 
-  will-change: transform;
+  will-change: transform, top;
 
   &--open {
     transform: rotateY(0deg);

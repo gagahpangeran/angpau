@@ -35,5 +35,7 @@
     transform-origin: center center;
     transform: rotate(var(--degree-item));
     transition: 500ms transform;
+
+    will-change: transform;
   }
 }

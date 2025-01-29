@@ -17,6 +17,8 @@
     width 300ms 2000ms,
     z-index 100ms 2000ms;
 
+  will-change: top, left, width, z-index;
+
   &--open {
     --w: min(95vw, 550px);
     top: -50vh;
@@ -46,6 +48,8 @@
     transition:
       500ms top,
       500ms height;
+
+    will-change: top, height;
 
     transform: translate(-50%, -50%);
 
