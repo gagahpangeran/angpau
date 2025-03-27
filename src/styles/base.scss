@@ -6,6 +6,7 @@
 :root {
   --primary-color: #019000;
   --secondary-color: #48a848;
+  --bg-color: #81ee96;
 
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
@@ -13,7 +14,7 @@
 body {
   min-width: 100%;
   min-height: 100vh;
-  background: #81ee96;
+  background: var(--bg-color);
 }
 
 a {
