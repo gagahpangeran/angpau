@@ -22,12 +22,12 @@ export default function HeaderText({
     <header className="header-text">
       {name.length > 0 ? (
         <>
-          <h1>Angpau for {name}</h1>
+          <h1>THR for {name}</h1>
           <h2>{formatter.format(money * 1000)}</h2>
         </>
       ) : (
         <>
-          <h1>Angpau Online</h1>
+          <h1>THR Online</h1>
           <h2>by GPR</h2>
         </>
       )}
