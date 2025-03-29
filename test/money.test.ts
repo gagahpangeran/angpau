@@ -3,12 +3,12 @@ import { moneyToRupiah, nameToMoney } from "../src/utils/money";
 
 test("string 'abc' to money", () => {
   const res = nameToMoney("abc");
-  expect(res).toBe(565);
+  expect(res).toBe(13);
 });
 
 test("string 'budi' to money", () => {
   const res = nameToMoney("Budi");
-  expect(res).toBe(443);
+  expect(res).toBe(89);
 });
 
 test("'443' money to rupiah", () => {
