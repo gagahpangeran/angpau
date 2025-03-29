@@ -6,11 +6,11 @@ export type RupiahValue = (typeof rupiahValues)[number];
 
 export function nameToMoney(name: string) {
   const moneySplit = [
-    { min: 1, max: 500 },
-    { min: 501, max: 1000 },
-    { min: 1001, max: 2000 }
+    { min: 1, max: 100 },
+    { min: 101, max: 500 },
+    { min: 501, max: 5000 }
   ];
-  const weight = [1000, 100, 1];
+  const weight = [100000, 1000, 1];
 
   const rng = new Chance(name);
   const bound = rng.weighted(moneySplit, weight);
