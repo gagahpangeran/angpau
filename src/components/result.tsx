@@ -14,7 +14,13 @@ export default function Result({ rupiahStack }: ResultProps) {
         </p>
         <p>THR Online by GPR</p>
         <p>
-          <a href="https://github.com/gagahpangeran/angpau/">Source Code</a>
+          <a
+            href="https://github.com/gagahpangeran/angpau/"
+            target="_blank"
+            rel="noreferrer nofollow"
+          >
+            Source Code
+          </a>
         </p>
       </div>
       <MoneyFan rupiahStack={rupiahStack} />
