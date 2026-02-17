@@ -8,9 +8,9 @@ const MAGIC_STRING = "FIREHORSE";
 
 export function nameToMoney(name: string) {
   const moneySplit = [
-    { min: 1, max: 100 },
-    { min: 101, max: 500 },
-    { min: 501, max: 5000 }
+    { min: 1, max: 300 },
+    { min: 301, max: 1000 },
+    { min: 1001, max: 5000 }
   ];
   const weight = [100000, 1000, 1];
 
