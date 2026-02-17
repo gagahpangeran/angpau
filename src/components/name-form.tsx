@@ -6,10 +6,10 @@ export default function NameForm() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const input = event.currentTarget.thrname as HTMLInputElement;
-    const thrname = input.value;
+    const input = event.currentTarget.inputname as HTMLInputElement;
+    const username = input.value;
 
-    void navigate(`/?name=${thrname}`);
+    void navigate(`/?name=${username}`);
   };
 
   return (
@@ -18,7 +18,7 @@ export default function NameForm() {
         type="text"
         placeholder="Enter your name"
         className="name-form__input"
-        name="thrname"
+        name="inputname"
       />
       <button type="submit" className="name-form__button">
         Get You THR
