@@ -21,7 +21,7 @@ export default function NameForm() {
         name="inputname"
       />
       <button type="submit" className="name-form__button">
-        Get You THR
+        Get You Angpau
       </button>
     </form>
   );

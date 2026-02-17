@@ -10,9 +10,9 @@ export default function Result({ rupiahStack }: ResultProps) {
     <div className="result">
       <div className="result__link">
         <p>
-          <a href="/">Get New THR</a>
+          <a href="/">Get New Angpau</a>
         </p>
-        <p>THR Online by GPR</p>
+        <p>Angpau Online by GPR</p>
         <p>
           <a
             href="https://github.com/gagahpangeran/angpau/"
