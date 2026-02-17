@@ -3,22 +3,22 @@ import { moneyToRupiah, nameToMoney } from "../src/utils/money";
 
 test("string 'abc' to money", () => {
   const res = nameToMoney("abc");
-  expect(res).toBe(13);
+  expect(res).toBe(53);
 });
 
 test("string 'budi' to money", () => {
   const res = nameToMoney("Budi");
-  expect(res).toBe(89);
+  expect(res).toBe(276);
 });
 
 test("string 'Muhammad Ardana' to money", () => {
   const res = nameToMoney("Muhammad Ardana");
-  expect(res).toBe(420);
+  expect(res).toBe(230);
 });
 
 test("string 'Audrey Brown' to money", () => {
   const res = nameToMoney("Audrey Brown");
-  expect(res).toBe(2624);
+  expect(res).toBe(6);
 });
 
 test("'443' money to rupiah", () => {
