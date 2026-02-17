@@ -4,6 +4,8 @@ const rupiahValues = [100, 50, 20, 10, 5, 2, 1] as const;
 
 export type RupiahValue = (typeof rupiahValues)[number];
 
+const MAGIC_STRING = "FIREHORSE";
+
 export function nameToMoney(name: string) {
   const moneySplit = [
     { min: 1, max: 100 },
@@ -12,7 +14,7 @@ export function nameToMoney(name: string) {
   ];
   const weight = [100000, 1000, 1];
 
-  const rng = new Chance(name);
+  const rng = new Chance(MAGIC_STRING + name);
   const bound = rng.weighted(moneySplit, weight);
   const money = rng.integer(bound);
 
